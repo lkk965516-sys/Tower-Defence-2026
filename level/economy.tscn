@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cfchc21tdqexn"]
+
+[ext_resource type="Script" uid="uid://b63vor1cde8tb" path="res://scripts/economy.gd" id="1_csm0v"]
+
+[node name="economy" type="Node2D" unique_id=1467999249]
+script = ExtResource("1_csm0v")

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dy13tf4t3oye4"]
+
+[ext_resource type="Script" uid="uid://dbj247c3jvq3w" path="res://scripts/projectile.gd" id="1_0nsab"]
+[ext_resource type="Texture2D" uid="uid://c5qj44bmixycf" path="res://assets/PNG/Retina/towerDefense_tile022.png" id="2_khydn"]
+[ext_resource type="Texture2D" uid="uid://dpqfcy32hwcd" path="res://assets/PNG/Retina/towerDefense_tile021.png" id="2_t4o6m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khydn"]
+
+[node name="projectile" type="Node2D" unique_id=1205609473]
+script = ExtResource("1_0nsab")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=251078357]
+scale = Vector2(2, 2)
+texture = ExtResource("2_t4o6m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=515914039]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_khydn")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1047505655]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1622003515]
+shape = SubResource("RectangleShape2D_khydn")

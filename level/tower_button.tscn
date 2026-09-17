@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bdf3u43w37wem"]
+
+[ext_resource type="Script" uid="uid://bis04881t3q81" path="res://scripts/tower_button.gd" id="1_0te0p"]
+[ext_resource type="Texture2D" uid="uid://dtmyf0h36oqem" path="res://assets/PNG/Default size/towerDefense_tile203.png" id="1_w5fh5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0te0p"]
+bg_color = Color(0.35247585, 0.6381286, 0.79341424, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 5
+
+[node name="Control" type="Control" unique_id=1630499418]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0te0p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1925595573]
+layout_mode = 0
+
+[node name="Panel" type="Panel" parent="VBoxContainer" unique_id=699388559]
+custom_minimum_size = Vector2(95, 95)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0te0p")
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/Panel" unique_id=1394174552]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.822
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel/CenterContainer" unique_id=124621397]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_w5fh5")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Button" type="Button" parent="VBoxContainer/Panel" unique_id=223211497]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.804
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+text = "Buy Tower"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1061906311]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1204844903]
+layout_mode = 2
+text = "Price:"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=2111515937]
+layout_mode = 2
+text = "999"

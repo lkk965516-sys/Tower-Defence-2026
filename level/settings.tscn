@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://c1u12u1kiaghu"]
+
+[ext_resource type="Script" uid="uid://dtvtfl2yqa150" path="res://level/settings.gd" id="1_nvcol"]
+[ext_resource type="PackedScene" uid="uid://bbtq05uit4seo" path="res://level/audio_slider.tscn" id="2_nvcol"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y3wq"]
+bg_color = Color(0.128464, 0.15641378, 0.17562923, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.18077159, 0.21127425, 0.050442096, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control" unique_id=2077844656]
+clip_contents = true
+layout_mode = 3
+anchor_right = 0.164
+anchor_bottom = 0.246
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nvcol")
+
+[node name="Panel" type="Panel" parent="." unique_id=428543357]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3y3wq")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel" unique_id=84534292]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.92200005
+theme_override_constants/separation = 12
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1022011716]
+layout_mode = 2
+alignment = 2
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer2/HBoxContainer4" unique_id=1933227701]
+layout_mode = 2
+text = " X "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1731075859]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/HBoxContainer" unique_id=1659072272]
+layout_mode = 2
+text = "Master"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1421124270]
+layout_mode = 2
+alignment = 1
+
+[node name="AudioSlider" parent="Panel/VBoxContainer2/HBoxContainer2" unique_id=1715904900 instance=ExtResource("2_nvcol")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1018524827]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/HBoxContainer3" unique_id=15815235]
+layout_mode = 2
+text = "SFX"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1901266169]
+layout_mode = 2
+alignment = 1
+
+[node name="AudioSlider" parent="Panel/VBoxContainer2/HBoxContainer6" unique_id=863621095 instance=ExtResource("2_nvcol")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+bus_name = "SFX"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1966247736]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/HBoxContainer7" unique_id=870108533]
+layout_mode = 2
+text = "Music"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=952497573]
+layout_mode = 2
+alignment = 1
+
+[node name="AudioSlider" parent="Panel/VBoxContainer2/HBoxContainer8" unique_id=1107260775 instance=ExtResource("2_nvcol")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+bus_name = "Music"

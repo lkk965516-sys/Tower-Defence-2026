@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://djdtp0ordhtm"]
+
+[ext_resource type="Script" uid="uid://dpkx7neq7xo2t" path="res://scripts/tower.gd" id="1_g2i4f"]
+[ext_resource type="Texture2D" uid="uid://dtmyf0h36oqem" path="res://assets/PNG/Default size/towerDefense_tile203.png" id="2_uo5rk"]
+
+[node name="tower" type="Node2D" unique_id=549302876]
+script = ExtResource("1_g2i4f")
+tower_name = "spiker"
+tower_type = "spikes"
+icon = ExtResource("2_uo5rk")
+cost = 40
+damage = 30
+attack_speed = 2.0
+projectile_speed = 300.0
+range = 300.0
+anti_air = true
+upgrade_cost = Array[int]([50, 75, 100])
+damage_per_upgrade = Array[int]([50, 75, 100])
+range_per_upgrade = Array[float]([330.0, 360.0, 390.0])
+attack_speed_per_upgrade = Array[float]([2.0, 2.0, 2.0])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1829506456]
+rotation = 1.5707964
+texture = ExtResource("2_uo5rk")
+
+[node name="Timer" type="Timer" parent="." unique_id=1289021491]

@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Fordance V.S Qualia"
+run/main_scene="uid://b2jflmnufmbvv"
+config/features=PackedStringArray("4.6", "Mobile")
+config/icon="res://assets/icon.svg"
+
+[autoload]
+
+global_tower="*uid://curg0psqboqw8"
+AudioManager="*uid://bu8bqojub2kc1"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[layer_names]
+
+2d_physics/layer_1="projectile"
+2d_physics/layer_2="enemy"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"

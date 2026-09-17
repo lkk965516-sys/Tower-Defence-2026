@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://b347sjfu3ary"]
+
+[ext_resource type="Script" uid="uid://ujsemla2ls1e" path="res://scripts/filled_tower_slot.gd" id="1_g6aqy"]
+[ext_resource type="Texture2D" uid="uid://c5ev8kklo575l" path="res://assets/PNG/Retina/towerDefense_tile041.png" id="1_wmes2"]
+[ext_resource type="Texture2D" uid="uid://dtmyf0h36oqem" path="res://assets/PNG/Default size/towerDefense_tile203.png" id="2_g6aqy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y3wq"]
+bg_color = Color(0.128464, 0.15641378, 0.17562923, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.18077159, 0.21127425, 0.050442096, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0bst4"]
+bg_color = Color(0.1816904, 0.70152044, 0.48749244, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Control" type="Control" unique_id=2077844656]
+clip_contents = true
+layout_mode = 3
+anchor_right = 0.16900001
+anchor_bottom = 0.32900003
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g6aqy")
+
+[node name="Panel" type="Panel" parent="." unique_id=428543357]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3y3wq")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel" unique_id=84534292]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+theme_override_constants/separation = 12
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1022011716]
+layout_mode = 2
+alignment = 2
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer2/HBoxContainer4" unique_id=1933227701]
+layout_mode = 2
+text = " X "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1731075859]
+layout_mode = 2
+alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer2/HBoxContainer" unique_id=1496762313]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Striker"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1324987081]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer2/HBoxContainer6" unique_id=1018604260]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0bst4")
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer2/HBoxContainer6/Panel" unique_id=1300778510]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/VBoxContainer2/HBoxContainer6/Panel/CenterContainer" unique_id=927698036]
+layout_mode = 2
+texture = ExtResource("1_wmes2")
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer2/HBoxContainer6/Panel/CenterContainer" unique_id=218148612]
+layout_mode = 2
+texture = ExtResource("2_g6aqy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer2/HBoxContainer6" unique_id=1534174853]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer2/HBoxContainer6/VBoxContainer" unique_id=287596371]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/HBoxContainer6/VBoxContainer/HBoxContainer" unique_id=1562543182]
+layout_mode = 2
+text = "Damage:          "
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer2/HBoxContainer6/VBoxContainer/HBoxContainer" unique_id=1717866732]
+layout_mode = 2
+text = "999"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer2/HBoxContainer6/VBoxContainer" unique_id=985548237]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/HBoxContainer6/VBoxContainer/HBoxContainer2" unique_id=1344197799]
+layout_mode = 2
+text = "Attack Speed: "
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer2/HBoxContainer6/VBoxContainer/HBoxContainer2" unique_id=808491797]
+layout_mode = 2
+text = "999"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer2/HBoxContainer6/VBoxContainer" unique_id=654625776]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/HBoxContainer6/VBoxContainer/HBoxContainer3" unique_id=434593658]
+layout_mode = 2
+text = "Range:              "
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer2/HBoxContainer6/VBoxContainer/HBoxContainer3" unique_id=192351200]
+layout_mode = 2
+text = "999"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=911101973]
+layout_mode = 2
+theme_override_constants/separation = 36
+alignment = 2
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer2/HBoxContainer2" unique_id=1528528333]
+layout_mode = 2
+text = "Previous"
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/HBoxContainer2" unique_id=1936505419]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+text = "First"
+horizontal_alignment = 1
+autowrap_trim_flags = 0
+
+[node name="Button2" type="Button" parent="Panel/VBoxContainer2/HBoxContainer2" unique_id=607901422]
+layout_mode = 2
+text = "Next"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=178538846]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/HBoxContainer5" unique_id=1491697923]
+layout_mode = 2
+text = "Upgrade Cost: "
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer2/HBoxContainer5" unique_id=857505007]
+layout_mode = 2
+text = "999"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer2/HBoxContainer5" unique_id=715947332]
+layout_mode = 2
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1331218772]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/HBoxContainer7" unique_id=1123201572]
+layout_mode = 2
+text = "Total Kills:        "
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer2/HBoxContainer7" unique_id=846276019]
+layout_mode = 2
+text = "999"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1970468124]
+layout_mode = 2
+theme_override_constants/separation = 140
+alignment = 1
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer2/HBoxContainer3" unique_id=217032387]
+layout_mode = 2
+text = "   SELL   "
+
+[node name="Button2" type="Button" parent="Panel/VBoxContainer2/HBoxContainer3" unique_id=369916505]
+layout_mode = 2
+text = "UPGRADE"

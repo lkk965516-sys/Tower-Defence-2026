@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bby1a82rp0au8"]
+
+[ext_resource type="Script" uid="uid://dtxyu0js3l6mq" path="res://scripts/tower_slot.gd" id="1_3a60e"]
+[ext_resource type="Texture2D" uid="uid://bd6p0ufn5s13c" path="res://assets/PNG/Retina/towerDefense_tile091.png" id="2_j6u5a"]
+[ext_resource type="Texture2D" uid="uid://c5ev8kklo575l" path="res://assets/PNG/Retina/towerDefense_tile041.png" id="3_j6u5a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6u5a"]
+size = Vector2(128, 128)
+
+[node name="towerslot" type="Node2D" unique_id=313886801]
+script = ExtResource("1_3a60e")
+
+[node name="unlocked_sprite" type="Sprite2D" parent="." unique_id=449168684]
+texture = ExtResource("2_j6u5a")
+
+[node name="locked_sprite" type="Sprite2D" parent="." unique_id=771692326]
+texture = ExtResource("3_j6u5a")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1976407961]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=444728180]
+shape = SubResource("RectangleShape2D_j6u5a")

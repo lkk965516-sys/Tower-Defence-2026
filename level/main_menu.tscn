@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://b2jflmnufmbvv"]
+
+[ext_resource type="Script" uid="uid://ctyoo11inkuq4" path="res://level/main_menu.gd" id="1_q7hnt"]
+[ext_resource type="PackedScene" uid="uid://c1u12u1kiaghu" path="res://level/settings.tscn" id="2_5vetp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y3wq"]
+bg_color = Color(0.128464, 0.15641378, 0.17562923, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.18077159, 0.21127425, 0.050442096, 1)
+
+[node name="Control" type="Control" unique_id=2077844656]
+clip_contents = true
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q7hnt")
+
+[node name="Panel" type="Panel" parent="." unique_id=428543357]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3y3wq")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel" unique_id=84534292]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+theme_override_constants/separation = 150
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1731075859]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/HBoxContainer" unique_id=1496762313]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Fordance V.S Qualia"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=204026464]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer2/HBoxContainer5" unique_id=914910853]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "START"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1614959468]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer2/HBoxContainer6" unique_id=1151209420]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=118776564]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer2/HBoxContainer8" unique_id=2035611815]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "QUIT"
+
+[node name="Node" type="Node" parent="." unique_id=1890226587]
+
+[node name="Control" parent="Node" unique_id=605779030 instance=ExtResource("2_5vetp")]

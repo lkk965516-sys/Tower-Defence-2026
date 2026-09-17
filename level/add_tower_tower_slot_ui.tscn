@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://rod8bin1e5b"]
+
+[ext_resource type="Script" uid="uid://c4ufaedl2ir17" path="res://scripts/add_tower_tower_slot_ui.gd" id="1_e13hy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y3wq"]
+bg_color = Color(0.128464, 0.15641378, 0.17562923, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.18077159, 0.21127425, 0.050442096, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control" unique_id=2077844656]
+clip_contents = true
+layout_mode = 3
+anchor_right = 0.164
+anchor_bottom = 0.432
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e13hy")
+
+[node name="Panel" type="Panel" parent="." unique_id=428543357]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3y3wq")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel" unique_id=84534292]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+theme_override_constants/separation = 12
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1022011716]
+layout_mode = 2
+alignment = 2
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer2/HBoxContainer4" unique_id=1933227701]
+layout_mode = 2
+text = " X "
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=1018524827]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2/HBoxContainer3" unique_id=1627837395]
+layout_mode = 2
+text = "Purchase Tower"
+
+[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer2" unique_id=759017018]
+layout_mode = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 3

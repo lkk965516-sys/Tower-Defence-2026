@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://citbgbj6w8tvw"]
+
+[ext_resource type="Script" uid="uid://dpkx7neq7xo2t" path="res://scripts/tower.gd" id="1_fcfrh"]
+[ext_resource type="Texture2D" uid="uid://dtmyf0h36oqem" path="res://assets/PNG/Default size/towerDefense_tile203.png" id="2_7ygrh"]
+
+[node name="Spiker" type="Node2D" unique_id=549302876]
+script = ExtResource("1_fcfrh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1829506456]
+texture = ExtResource("2_7ygrh")
+
+[node name="Timer" type="Timer" parent="." unique_id=1897145282]

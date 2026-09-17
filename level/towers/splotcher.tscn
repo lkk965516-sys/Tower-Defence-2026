@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://byu87sfg0cdl0"]
+
+[ext_resource type="Script" uid="uid://dpkx7neq7xo2t" path="res://scripts/tower.gd" id="1_6eynt"]
+[ext_resource type="Texture2D" uid="uid://bsmkl6ghl5r7i" path="res://assets/PNG/Retina/towerDefense_tile206.png" id="3_imw4n"]
+
+[node name="tower" type="Node2D" unique_id=549302876]
+script = ExtResource("1_6eynt")
+tower_name = "splotcher"
+tower_type = "splotches"
+icon = ExtResource("3_imw4n")
+cost = 40
+damage = 20
+attack_speed = 2.5
+projectile_speed = 320.0
+range = 275.0
+aoe_radius = 120.0
+upgrade_cost = Array[int]([45, 75, 100])
+damage_per_upgrade = Array[int]([25, 30, 40])
+range_per_upgrade = Array[float]([300.0, 325.0, 350.0])
+attack_speed_per_upgrade = Array[float]([2.4, 2.3, 2.2])
+penetration_per_upgrade = Array[float]([0.0, 0.0, 0.0])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1829506456]
+rotation = 1.5707964
+texture = ExtResource("3_imw4n")
+
+[node name="Timer" type="Timer" parent="." unique_id=1289021491]

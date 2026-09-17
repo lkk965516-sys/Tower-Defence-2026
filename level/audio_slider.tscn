@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bbtq05uit4seo"]
+
+[ext_resource type="Script" uid="uid://biu4te10uinbr" path="res://level/audio_slider.gd" id="1_k2563"]
+
+[node name="AudioSlider" type="HSlider" unique_id=1715904900]
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_k2563")
+bus_name = "Master"

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c0c0jrqg0npah"]
+
+[ext_resource type="Script" uid="uid://bw2xdcgchbr5c" path="res://scripts/enemy.gd" id="1_otv7i"]
+[ext_resource type="Texture2D" uid="uid://beqyse2gcxaut" path="res://assets/PNG/Retina/towerDefense_tile245.png" id="2_otv7i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pc2po"]
+size = Vector2(53, 54)
+
+[node name="Enemy" type="Node2D" unique_id=791869974]
+script = ExtResource("1_otv7i")
+max_health = 200
+current_hp = 200
+value = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=802668024]
+texture = ExtResource("2_otv7i")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=58168018]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1029493064]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_pc2po")
